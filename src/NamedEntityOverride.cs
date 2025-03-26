@@ -7,7 +7,7 @@ namespace Soenneker.AutoFaker.Overrides.Entities.Named;
 /// <summary>
 /// An AutoFaker (AutoBogus) override for NamedEntity object
 /// </summary>
-public class NamedEntityOverrideOverride : AutoFakerOverride<NamedEntity>
+public class NamedEntityOverride : AutoFakerOverride<NamedEntity>
 {
     public override bool CanOverride(AutoFakerContext context)
     {
