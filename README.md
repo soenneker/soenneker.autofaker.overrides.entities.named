@@ -5,20 +5,24 @@
 
 # Soenneker.AutoFaker.Overrides.Entities.Named
 
-An AutoFaker (AutoBogus) override for NamedEntity object.
+An AutoFaker override that assigns an ID and display name to `NamedEntity` models.
 
-## Install
+## Installation
 
 ```bash
 dotnet add package Soenneker.AutoFaker.Overrides.Entities.Named
 ```
 
-## What you get
+## Usage
 
-- `NamedEntityOverride` — An AutoFaker (AutoBogus) override for NamedEntity object.
+```csharp
+using Soenneker.AutoFaker.Overrides.Entities.Named;
+using Soenneker.Utils.AutoBogus;
 
-## API at a glance
+var autoFaker = new AutoFaker();
+autoFaker.Config.Overrides = [new NamedEntityOverride()];
 
-| API | What it does | Result / important behavior |
-| --- | --- | --- |
-| `NamedEntityOverride.CanOverride(context)` | Executes the can override operation. | A value indicating whether the operation succeeded. |
+ProductEntity entity = autoFaker.Generate<ProductEntity>();
+```
+
+The override applies to `NamedEntity` and derived types. `Id` becomes a GUID string and `Name` becomes a generated commerce product name. Later matching overrides can replace either value.

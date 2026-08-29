@@ -16,7 +16,7 @@ public class NamedEntityOverride : AutoFakerOverride<NamedEntity>
     /// <returns>A value indicating whether the operation succeeded.</returns>
     public override bool CanOverride(AutoFakerContext context)
     {
-        return context.GenerateType.IsSubclassOf(typeof(NamedEntity));
+        return typeof(NamedEntity).IsAssignableFrom(context.GenerateType);
     }
 
     /// <summary>
