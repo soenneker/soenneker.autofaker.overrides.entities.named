@@ -45,10 +45,10 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Utils.AutoBogus" Version="4.0.985" />
+        <PackageReference Include="Soenneker.Utils.AutoBogus" Version="4.0.986" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Soenneker.Entities.Entity" Version="4.0.711" />
-        <PackageReference Include="Soenneker.Entities.Named" Version="4.0.1294" />
+        <PackageReference Include="Soenneker.Entities.Named" Version="4.0.1295" />
     </ItemGroup>
 </Project>
